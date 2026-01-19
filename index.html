@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>📚 Student Study Planner</h1>
+            <p class="subtitle">Organize your studies and stay on track!</p>
+        </header>
+
+        <!-- Progress Indicator -->
+        <div class="progress-section">
+            <div class="progress-info">
+                <span class="progress-text">Progress: <strong id="completed-count">0</strong> / <strong id="total-count">0</strong> tasks completed</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Add Task Form -->
+        <div class="form-container">
+            <h2>Add New Study Task</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="subject">Subject Name *</label>
+                    <input type="text" id="subject" placeholder="e.g., Mathematics, Science" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Task Description *</label>
+                    <textarea id="description" rows="3" placeholder="e.g., Complete Chapter 5 exercises" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="due-date">Due Date *</label>
+                    <input type="date" id="due-date" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">➕ Add Task</button>
+            </form>
+        </div>
+
+        <!-- Tasks Display Section -->
+        <div class="tasks-section">
+            <h2>Your Study Tasks</h2>
+            <div id="tasks-container" class="tasks-container">
+                <!-- Tasks will be dynamically inserted here -->
+                <div class="empty-state" id="empty-state">
+                    <p>📝 No tasks yet. Add your first study task above!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
